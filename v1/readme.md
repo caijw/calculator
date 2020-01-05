@@ -12,6 +12,7 @@
 ## 运行
 
 ```sh
+cd ..
 npm install
 npm run compile
 node ./dist/cli.js -v
