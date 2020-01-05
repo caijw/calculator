@@ -1,0 +1,14 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+      "ordered-imports": [false],
+      "no-console": [false],
+      "no-debugger": false,
+      "no-shadowed-variable": false,
+      "max-line-length": [false],
+      "max-classes-per-file": [false],
+      "no-var-requires": false,
+      "object-literal-sort-keys": false
+    }
+  }
+  

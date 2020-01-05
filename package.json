@@ -1,0 +1,41 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "versionInfo": [],
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "compile": "tsc --declaration",
+    "lint": "tslint --project tsconfig.json",
+    "test": "npm run lint && npm run _mocha",
+    "_mocha": "mocha -t 999999 -r ts-node/register test/test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caijw/calculator.git"
+  },
+  "keywords": [
+    "calculator"
+  ],
+  "author": "caijw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caijw/calculator/issues"
+  },
+  "homepage": "https://github.com/caijw/calculator#readme",
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "mocha": "^6.2.0",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "bin": {
+    "calculator": "dist/calculator.js"
+  },
+  "dependencies": {
+    "@types/antlr4": "^4.7.0",
+    "antlr4": "^4.7.2"
+  }
+}
