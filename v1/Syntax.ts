@@ -75,7 +75,7 @@ class Syntax {
     return node;
   }
   /**
-   * 赋值语句，如age = 10*2;
+   * 赋值语句，如age = 10 * 2;
    */
   private assignmentStatement(tokens: TokenReader): ASTNode|null {
     let node: ASTNode|null = null;

@@ -95,6 +95,7 @@ class Script {
       default:
         break;
     }
+    result = Math.round(result); // 强制转换为整数
     if (this.verbose) {
       console.log(indent + "Result: " + result);
     } else if (indent === "") {

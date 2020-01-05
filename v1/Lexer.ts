@@ -5,19 +5,28 @@ import { Token, TokenType, TokenReader } from "./Token";
 import * as util from "./util";
 
 enum DfaState {
-  Initial,
+  Initial, // 0
 
-  Int, Id_int1, Id_int2, Id_int3, Id, GE,
+  Id_int1, // 1
+  Id_int2,
+  Id_int3,
+  Int,
 
-  Assignment,
+  Id, // 5
 
-  Plus, Minus, Star, Slash,
+  Assignment, // 6
 
-  SemiColon,
-  LeftParen,
+  Plus, // 7
+  Minus,
+  Star,
+  Slash,
+
+  SemiColon, // 11
+
+  LeftParen, // 12
   RightParen,
 
-  IntLiteral,
+  IntLiteral, // 15
 }
 
 class Lexer {
@@ -49,7 +58,6 @@ class Lexer {
               state = this.initToken(ch);
           }
           break;
-        case DfaState.GE:
         case DfaState.Assignment:
         case DfaState.Plus:
         case DfaState.Minus:
@@ -153,6 +161,7 @@ class Lexer {
     } else if (ch === `/`) {
       newState = DfaState.Slash;
       this.token.type = TokenType.Slash;
+      this.tokenText = `${this.tokenText}${ch}`;
     } else if (ch === `;`) {
       newState = DfaState.SemiColon;
       this.token.type = TokenType.SemiColon;
