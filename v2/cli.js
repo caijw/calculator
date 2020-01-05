@@ -26,7 +26,7 @@ if (process.argv[2] === "-v") {
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-  prompt: 'script engine> '
+  prompt: 'calculator> '
 });
 
 rl.prompt();
