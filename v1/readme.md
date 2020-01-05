@@ -18,4 +18,4 @@ npm run compile
 node ./dist/cli.js -v
 ```
 
-![example](../docs/example.png)
+![example](https://github.com/caijw/calculator/blob/master/docs/example.png)
