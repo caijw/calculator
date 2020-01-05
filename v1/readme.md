@@ -17,3 +17,5 @@ npm install
 npm run compile
 node ./dist/cli.js -v
 ```
+
+![example](../docs/example.png)
