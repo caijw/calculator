@@ -1,17 +1,17 @@
 
 enum TokenType {
-  Init, // init 0
-  Plus,   // + 1
-  Minus,  // - 2
-  Star,   // * 3
-  Slash,  // / 4
-  SemiColon, // ; 5
-  LeftParen, // ( 6
+  Init,       // init 0
+  Plus,       // + 1
+  Minus,      // - 2
+  Star,       // * 3
+  Slash,      // / 4
+  SemiColon,  // ; 5
+  LeftParen,  // ( 6
   RightParen, // ) 7
   Assignment, // = 8
-  Int, // int 9
+  Int,        // int 9
   Identifier, // 标识符 10
-  IntLiteral,  // 整型字面量 11
+  IntLiteral, // 整型字面量 11
 }
 
 class Token {

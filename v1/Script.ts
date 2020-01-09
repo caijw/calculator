@@ -1,18 +1,3 @@
-/**
- * 一个简单的脚本解释器。
- * 所支持的语法，请参见SimpleParser.java
- *
- * 运行脚本：
- * > 2+3;
- * > int age = 10;
- * > int b;
- * > b = 10*2;
- * > age = age + b;
- *
- * 你还可以使用一个参数 -v，让每次执行脚本的时候，都输出AST和整个计算过程。
- *
- */
-
 import { ASTNodeType, ASTNode } from "./ASTNode";
 
 class Script {
@@ -97,7 +82,7 @@ class Script {
     }
     result = Math.round(result); // 强制转换为整数
     if (this.verbose) {
-      console.log(indent + "Result: " + result);
+      console.log(indent + "result: " + result);
     } else if (indent === "") {
       if (node.getType() === ASTNodeType.IntDeclaration || node.getType() === ASTNodeType.AssignmentStmt) {
         console.log(node.getText() + ": " + result);

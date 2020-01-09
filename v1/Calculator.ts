@@ -8,7 +8,7 @@ class Calculator {
       const tree: ASTNode = this.parse(script);
       console.log("dumpAST:");
       this.dumpAST(tree, "");
-      console.log("evaluateASTNode:");
+      console.log("evaluateAST:");
       this.evaluateASTNode(tree, "");
     } catch (err) {
       console.error(err.message);
@@ -42,7 +42,7 @@ class Calculator {
     let child2: ASTNode;
     let value1: number;
     let value2: number;
-    console.log(indent + "Calculating: " + node.getType());
+    console.log(indent + "calculate: " + node.getType());
     switch (node.getType()) {
       case ASTNodeType.Programm:
         children.forEach((child) => {
@@ -77,7 +77,7 @@ class Calculator {
       default:
         break;
     }
-    console.log(indent + "Result: " + result);
+    console.log(indent + "result: " + result);
     return result;
   }
   private prog(tokens: TokenReader): ASTNode {

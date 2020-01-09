@@ -7,7 +7,7 @@ enum ASTNodeType {
   Multiplicative,     // 乘法表达式 5
   Additive,           // 加法表达式 6
   Identifier,         // 标识符 7
-  IntLiteral,          // 整型字面量 8
+  IntLiteral,         // 整型字面量 8
 }
 
 class ASTNode {
