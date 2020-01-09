@@ -1,4 +1,3 @@
-
 enum TokenType {
   Init,       // init 0
   Plus,       // + 1
