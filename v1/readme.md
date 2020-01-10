@@ -13,6 +13,6 @@ npm run compile
 node ./dist/cli.js -v
 ```
 
-备注：语句必须以`;`结束
+备注：输入`calculator`的语句必须以`;`结束
 
 ![example](https://github.com/caijw/calculator/blob/master/docs/example.png)
