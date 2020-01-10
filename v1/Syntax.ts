@@ -1,3 +1,13 @@
+/**
+ * 语法规则为：
+ * programm -> intDeclare | expressionStatement | assignmentStatement
+ * intDeclare -> 'int' Id ( = additive) ';'
+ * expressionStatement -> addtive ';'
+ * addtive -> multiplicative ( (+ | -) multiplicative)*
+ * multiplicative -> primary ( (* | /) primary)*
+ * primary -> IntLiteral | Id | (additive)
+ */
+
 import { Lexer } from "./Lexer";
 import { TokenReader, Token, TokenType } from "./Token";
 import { ASTNodeType, ASTNode } from "./ASTNode";
@@ -140,7 +150,7 @@ class Syntax {
           const child2: ASTNode|null = this.multiplicative(tokens);
           if (child2 !== null) {
             node = new ASTNode(ASTNodeType.Additive, token.getText());
-            node.addChild(child1);              // 新节点在顶层，保证正确的结合性
+            node.addChild(child1);              // 新节点在上层，保证运算的左结合性
             node.addChild(child2);
             child1 = node;
           } else {
