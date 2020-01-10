@@ -63,7 +63,7 @@ class Syntax {
     return node;
   }
   /**
-   * 赋值语句，如age = 10 * 2;
+   * 赋值语句
    */
   private assignmentStatement(tokens: TokenReader): ASTNode|null {
     let node: ASTNode|null = null;
@@ -94,9 +94,7 @@ class Syntax {
     return node;
   }
   /**
-   * 整型变量声明，如：
-   * int a;
-   * int b = 2*3;
+   * 整型变量声明
    */
   private intDeclare(tokens: TokenReader): ASTNode|null {
     let node: ASTNode|null = null;

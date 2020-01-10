@@ -49,6 +49,6 @@ rl.on("line", (line) => {
   }
   rl.prompt();
 }).on("close", () => {
-  console.log("Have a great day!");
+  console.log("see you!");
   process.exit(0);
 });
