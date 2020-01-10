@@ -12,4 +12,6 @@ npm install
 node ./v2/cli.js -v
 ```
 
+备注：语句必须以`;`结束
+
 ![example](https://github.com/caijw/calculator/blob/master/docs/example_2.png)
